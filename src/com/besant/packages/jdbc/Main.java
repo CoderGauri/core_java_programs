@@ -3,14 +3,14 @@ package com.besant.packages.jdbc;
 import java.sql.*;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws SQLException {
         //steps to connect java to DB
         //create a driver
         //create a connection --auth
         //preapring the query
         //excecute the query
         //close the connections
-        PreparedStatement statement Connection connection;
+        PreparedStatement statement; Connection connection;
         try {
             //creating a driver
             Class.forName("com.mysql.cj.jsbc.Driver");
@@ -23,12 +23,12 @@ public class Main {
             throw new RuntimeException(e);
         } catch (SQLException e) {
             throw new RuntimeException(e);
-        }
+        }}}
 //step 4
 //excecute the query
-        statement.executeUpdate();
-catch(Exception e)
-        //TODO : handle exception
-        connection.close();
-    }
-}
+//        statement.executeUpdate();
+//catch(Exception e)
+//        //TODO : handle exception
+//        connection.close();
+//    }
+//}
